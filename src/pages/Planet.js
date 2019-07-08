@@ -12,7 +12,7 @@ const PendingView = () => (
   <View
     style={{
       flex: 1,
-      backgroundColor: 'lightgreen',
+      backgroundColor: 'blue',
       justifyContent: 'center',
       alignItems: 'center',
       width:'100%'
@@ -148,7 +148,7 @@ class Home extends PureComponent {
             this.camera = ref;
           }}
         style={styles.preview}
-        type={RNCamera.Constants.Type.back}
+        type={RNCamera.Constants.Type.front}
         flashMode={RNCamera.Constants.FlashMode.on}
         androidCameraPermissionOptions={{
           title: 'Permission to use camera',
