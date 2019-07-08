@@ -11,7 +11,7 @@ function capitalizeFirstLetter(string) {
 
 class Home extends Component {
 
-  constructor(props: Props) {
+  constructor(props) {
     super(props);
     this.state = {
       planets: [],

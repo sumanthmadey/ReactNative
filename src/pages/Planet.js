@@ -22,10 +22,10 @@ const PendingView = () => (
   </View>
 );
 
-type Props = {};
+
 
 class Home extends PureComponent {
-  constructor(props: Props) {
+  constructor(props) {
     super(props);
     this.state = {
       planet:null,

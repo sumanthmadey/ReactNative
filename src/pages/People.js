@@ -7,10 +7,9 @@ function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-type Props = {};
 
 class Home extends Component {
-  constructor(props: Props) {
+  constructor(props) {
     super(props);
     this.state = {
       peoples: [],
