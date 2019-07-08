@@ -1,12 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- * @lint-ignore-every XPLATJSCOPYRIGHT1
- */
-
 import React, { PureComponent } from "react";
 import { Platform, StyleSheet, Text, View, ScrollView,ActivityIndicator,TouchableOpacity,Image } from "react-native";
 import { ListItem, Icon,Overlay,Header,Button,Avatar } from "react-native-elements";
@@ -34,11 +25,6 @@ const PendingView = () => (
 type Props = {};
 
 class Home extends PureComponent {
-  /**
-   * constructor - description
-   *
-   * @return {type}  description
-   */
   constructor(props: Props) {
     super(props);
     this.state = {
@@ -49,23 +35,12 @@ class Home extends PureComponent {
     }
   }
 
-  /**
-   * componentDidMount - description
-   *
-   * @return {type}  description
-   */
+ 
   componentDidMount() {
     this.loadPlanet(this.props.navigation.getParam('url'));
   }
 
 
-  /**
-   * renderRow - description
-   *
-   * @param  {type} key   description
-   * @param  {type} value description
-   * @return {type}       description
-   */
   renderRow() {
     const showList = ['name','population','diameter','climate','gravity'];
     return showList.map((item)=>(
@@ -82,11 +57,6 @@ class Home extends PureComponent {
 
   }
 
-  /**
-   * loadPlanets - description
-   *
-   * @return {type}  description
-   */
   loadPlanet(url) {
     this.setState({isLoading:true});
     fetch(url)
@@ -112,11 +82,7 @@ class Home extends PureComponent {
         this.setState({image:data.uri,showCamera:false});
       }
     };
-  /**
-   * loadFilms - description
-   *
-   * @return {type}  description
-   */
+
   loadFilms(){
     if(this.state.planet!==null){
       const { planet } = this.state;
@@ -137,12 +103,6 @@ class Home extends PureComponent {
 
   }
 
-
-  /**
-   * render - description
-   *
-   * @return {type}  description
-   */
   render() {
     return (
       <View style={{flex:1,backgroundColor:'white'}}>

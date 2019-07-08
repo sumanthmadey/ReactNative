@@ -1,11 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- * @lint-ignore-every XPLATJSCOPYRIGHT1
- */
 
 import React, { Component } from "react";
 import { Platform, StyleSheet, Text, View, ScrollView,ActivityIndicator } from "react-native";
@@ -18,11 +10,6 @@ function capitalizeFirstLetter(string) {
 type Props = {};
 
 class Home extends Component {
-  /**
-   * constructor - description
-   *
-   * @return {type}  description
-   */
   constructor(props: Props) {
     super(props);
     this.state = {
@@ -33,20 +20,10 @@ class Home extends Component {
     };
   }
 
-  /**
-   * componentDidMount - description
-   *
-   * @return {type}  description
-   */
   componentDidMount() {
     this.loadPeoples();
   }
 
-  /**
-   * loadPlanets - description
-   *
-   * @return {type}  description
-   */
   loadPeoples() {
     this.setState({isLoading:true});
     fetch("https://swapi.co/api/people/")
@@ -61,14 +38,6 @@ class Home extends Component {
       });
   }
 
-
-  /**
-   * renderRow - description
-   *
-   * @param  {type} key   description
-   * @param  {type} value description
-   * @return {type}       description
-   */
   renderRow() {
     const showList = ['name','height','gender','birth_year','hair_color','skin_color','homeworld'];
     return showList.map((item)=>(
@@ -90,11 +59,6 @@ class Home extends Component {
 
   }
 
-  /**
-   * render - description
-   *
-   * @return {type}  description
-   */
   render() {
     return (
       <View style={{flex:1}}>
